@@ -1,0 +1,91 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #C33764 , #1D2671);
+}
+
+#chat-container {
+    background-color: #00000033;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Add some styling for the typing effect */
+#response-container {
+    color:#ffffff;
+    overflow: hidden;
+    font-size: 20px;
+    display: inline-block;
+}
+
+/* Create a blinking cursor */
+#response-cursor {
+    display: inline-block;
+    width: 0.1em;
+    height: 1.2em;
+    margin-left: 2px;
+    background-color: #ffffff;
+    animation: blink 1s infinite;
+}
+
+/* Apply the typing animation to response-content */
+#response-content {
+    opacity: 0;
+    animation: typing 3s steps(30) forwards;
+}
+#additional-text {
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0; /* Set opacity to 1 to make it visible immediately */
+    transition: opacity 2s ease-in-out; /* Optional: Add a fade-in effect */
+}
+
+.title-container {
+    color:#ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.label-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+.form-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+.input-container {
+    background: transparent;
+    border: unset;
+    border-bottom: 2px solid white;
+    transition: all 1s ease-out;
+    color:#ffffff;
+}
+.input-container:focus-visible{
+    outline: unset;
+
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes typing {
+    to {
+        opacity: 1;
+    }
+}
